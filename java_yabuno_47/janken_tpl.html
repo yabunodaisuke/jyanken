@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/sample.css">
+<title>じゃんけん</title>
+</head>
+
+<header>
+  <h1>Rock-paper-scissors</h1>
+</header>
+
+<main> 
+  <a href="#" id="gu_btn">rock</a>
+  <a href="#" id="par_btn">paper</a>
+  <a href="#" id="cho_btn">scissors</a>
+  
+  <div>コンピュータの出した手は？<span id="pc_hands"></span></div>
+
+  <div><span id="judgment"></span></div>
+  <div><span id="examination"></span></div>
+</main>
+<content>
+    <div>勝敗：<span id="m_hands"></span></div>
+    <div><span id="p_hands"></span></div>
+</content>
+ <script>
+   let total = 0;
+   let total1 = 0;
+//じゃんけん用のSCRIPTを書いてください
+// グー
+$("#gu_btn").on("click",function(){
+    const num = Math.ceil( Math.random() * 100 );
+if(num>=70){
+    $("#pc_hands").html("");
+    $("#m_hands").html("");
+    $("#judgment").html("<p>You Win🤗</p>")
+    total += 1
+    $("#m_hands").append("" +total +"勝" )
+    
+    
+}
+
+// 10回勝つと動画
+if(total>=10){
+  $("#examination").html('<iframe width="1100" height="500" src="https://www.youtube.com/embed/sQGOlawi6n0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></>autoplay muted>');
+  $("#m_hands").css('color','#ff0000');
+}
+if(num>=50 && num<=69){
+    $("#pc_hands").html("パー");
+    $("#p_hands").html("");
+    $("#judgment").html("<p>You Lose😭</p>")
+    total1 += 1
+    $("#p_hands").append("" +total1 +"敗")
+}
+
+if(num<=40){
+    $("#pc_hands").html("グー");
+    $("#judgment").html("<p>Draw 😖</p>")
+    
+}
+
+});
+// チョキ
+$("#cho_btn").on("click",function(){
+    const num = Math.ceil( Math.random() * 100 );
+if(num>=70){
+    $("#pc_hands").html("チョキ")
+    $("#judgment").html("<p>Draw 😖</p>")
+    
+}
+if(num>=50 && num<=69){
+    $("#pc_hands").html("パー")
+    $("#m_hands").html("");
+    $("#judgment").html("<p>You Win🤗</p>")
+    total += 1
+    $("#m_hands").append("" +total +"勝" )
+}
+
+if(num<=40){
+    $("#pc_hands").html("グー")
+    $("#p_hands").html("");
+    $("#judgment").html("<p>You Lose😭</p>")
+    total1 += 1
+    $("#p_hands").append("" +total1 +"敗")
+}
+});   
+  // パー
+  $("#par_btn").on("click",function(){
+    const num = Math.ceil( Math.random() * 3 );
+if(num>=70){
+    $("#judgment").html("<p>Draw 😖</p>")
+}
+if(num>=50 && num<=69){
+    $("#m_hands").html("");
+    $("#judgment").html("<p>You Win🤗</p>")
+    total += 1
+    $("#m_hands").append("" +total +"勝" )
+    
+}
+if(num<=40){
+    $("#p_hands").html("");
+    $("#judgment").html("<p>You Lose😭</p>")
+    total1 += 1
+    $("#p_hands").append("" +total1 +"敗")
+}
+
+}); 
+</script>
+</body>
+
+</html>

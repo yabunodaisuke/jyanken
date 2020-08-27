@@ -1,0 +1,94 @@
+body{
+    margin:0;
+    padding:0;
+    text-align:left;
+    font-size: 32px;
+    background: white;
+    color: greenyellow;
+    background:url(..//01.jpg) no-repeat ;
+    background-size: cover;
+    justify-content: center;
+}
+header{
+    height: 100px;
+    background-color: black;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    color: white;
+}
+main {
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+}
+content {
+    justify-content: center;
+    display: flex;
+}
+
+/* 旧ボタン */
+li{
+    text-align: center;
+    list-style-type:none;
+    border: 1px solid #666;
+    background-color: #FFF;
+    display:table-cell;  /* 定義 */
+    cursor: pointer;
+}
+li:hover{
+    background: #0066CC;
+    color:#fff;
+}
+/* 追加部分 */
+  p {
+    font-size: 30px;
+    text-align: center;
+    height: 90px;
+}
+
+/* グーボタン */
+a#gu_btn {
+    display: inline-block;
+  text-decoration: none;
+  background: red;
+  color: #FFF;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  transition: .4s;
+}
+/* チョキボタン */
+a#cho_btn {
+    display: inline-block;
+  text-decoration: none;
+  background:yellowgreen;
+  color: #FFF;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  transition: .4s;
+  
+}
+/* パー */
+a#par_btn {
+    display: inline-block;
+  text-decoration: none;
+  background: #87befd;
+  color: #FFF;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  transition: .4s;
+}
+#text {
+    color: aqua;
+}
